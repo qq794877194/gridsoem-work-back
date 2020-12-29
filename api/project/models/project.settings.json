@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "project",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "star": {
+      "type": "integer"
+    },
+    "watch": {
+      "type": "integer"
+    },
+    "fork": {
+      "type": "integer"
+    },
+    "languages": {
+      "collection": "tag",
+      "via": "projects",
+      "dominant": true
+    },
+    "license": {
+      "type": "enumeration",
+      "enum": [
+        "MIT",
+        "Apache",
+        "BSD"
+      ]
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

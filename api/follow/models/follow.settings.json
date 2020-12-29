@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "follows",
+  "info": {
+    "name": "follow",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "followUrl": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "address": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}
